@@ -2,7 +2,7 @@ import React, { createContext, useContext, useReducer, type Dispatch } from 'rea
 import type { Character, GameMap, GameTime, ChatSession, GameSettings, GameView } from '../types';
 import { initialCharacters, initialMap, initialTime, initialChatSessions, initialSettings } from '../data/mockData';
 
-interface Notification {
+export interface Notification {
   id: string;
   type: 'info' | 'success' | 'warning' | 'error';
   title: string;
