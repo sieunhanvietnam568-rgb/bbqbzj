@@ -2,8 +2,7 @@ import { useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { X, Info, CheckCircle, AlertTriangle, AlertCircle } from 'lucide-react';
 import { useGame } from '../../context/GameContext';
-interface NotificationItem { id: string; type: 'info' | 'success' | 'warning' | 'error'; title: string; message: string; }
-function ToastItem({ notification }: { notification: NotificationItem }) {
+import type { Notification } from '../../context/GameContext';
 import './Toast.css';
 
 const iconMap = {
