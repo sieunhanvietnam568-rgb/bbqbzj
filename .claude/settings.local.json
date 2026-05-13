@@ -29,7 +29,10 @@
       "Bash(git config *)",
       "Bash(git push *)",
       "Skill(update-config)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(powershell.exe *)",
+      "Bash(winget search *)",
+      "Bash(pwsh.exe *)"
     ]
   }
 }
