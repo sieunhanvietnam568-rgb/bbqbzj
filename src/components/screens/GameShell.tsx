@@ -25,6 +25,7 @@ export default function GameShell() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
     >
       <DynamicIsland />
       <motion.main
