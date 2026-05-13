@@ -62,7 +62,7 @@ export default function CharacterDetail({ character }: Props) {
       <div className="cd-content" role="tabpanel">
         <AnimatePresence mode="wait">
           {activeTab === 'info' && (
-            <motion.div key="info" className="cd-tab-content" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.2 }}>
+            <motion.div key="info" className="cd-tab-content" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.4 }}>
               <div className="info-grid">
                 <div className="info-item">
                   <span className="info-label">姓名</span>
@@ -85,13 +85,13 @@ export default function CharacterDetail({ character }: Props) {
           )}
 
           {activeTab === 'clothing' && (
-            <motion.div key="clothing" className="cd-tab-content" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.2 }}>
+            <motion.div key="clothing" className="cd-tab-content" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.4 }}>
               <ClothingEditor character={character} />
             </motion.div>
           )}
 
           {activeTab === 'stats' && (
-            <motion.div key="stats" className="cd-tab-content" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.2 }}>
+            <motion.div key="stats" className="cd-tab-content" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.4 }}>
               <div className="stats-grid">
                 <StatBar label="好感度" value={character.stats.affection} size="lg" />
                 <StatBar label="饥饿值" value={character.stats.hunger} size="lg" />
@@ -104,13 +104,13 @@ export default function CharacterDetail({ character }: Props) {
           )}
 
           {activeTab === 'body' && (
-            <motion.div key="body" className="cd-tab-content" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.2 }}>
+            <motion.div key="body" className="cd-tab-content" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.4 }}>
               <BodyPartStatus character={character} />
             </motion.div>
           )}
 
           {activeTab === 'psyche' && (
-            <motion.div key="psyche" className="cd-tab-content" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.2 }}>
+            <motion.div key="psyche" className="cd-tab-content" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.4 }}>
               <div className="psyche-box">
                 <div className="psyche-header">
                   <Brain size={18} className="text-accent" />
