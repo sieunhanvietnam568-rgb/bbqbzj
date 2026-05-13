@@ -57,6 +57,15 @@ export default function DynamicIsland() {
                 <span>{item.label}</span>
               </button>
             ))}
+            <div className="di-divider" />
+            <button
+              id="nav-return"
+              className="di-nav-item di-nav-return"
+              onClick={(e) => { e.stopPropagation(); dispatch({ type: 'RETURN_TO_START' }); }}
+            >
+              <LogOut size={18} />
+              <span>返回开始</span>
+            </button>
           </motion.div>
         )}
       </AnimatePresence>
