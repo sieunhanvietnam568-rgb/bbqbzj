@@ -83,3 +83,15 @@
   background: rgba(126,200,227,0.15);
   color: var(--color-primary);
 }
+.di-divider {
+  height: 1px;
+  margin: 4px 8px;
+  background: var(--border-subtle);
+}
+.di-nav-return {
+  color: var(--text-muted);
+}
+.di-nav-return:hover {
+  color: var(--color-danger);
+  background: rgba(255,107,107,0.1);
+}
