@@ -103,16 +103,6 @@ export default function MapView() {
                     <span key={r} className="resource-tag"><Package size={9} /> {r}</span>
                   ))}
                 </div>
-                {!isCurrent && (
-                  <button
-                    id={`travel-${region.id}`}
-                    className="travel-btn"
-                    onClick={() => handleTravel(region.id)}
-                  >
-                    <Navigation size={14} />
-                    前往此地
-                  </button>
-                )}
               </GlassPanel>
             </motion.div>
           );
