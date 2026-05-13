@@ -42,7 +42,7 @@ export default function StatBar({ label, value, max = 100, icon: Icon, color, sh
           style={{ background: gradient }}
           initial={{ width: 0 }}
           animate={{ width: `${pct}%` }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
+          transition={{ duration: 1.2, ease: 'easeOut' }}
         />
         <div className="stat-shine" />
       </div>
