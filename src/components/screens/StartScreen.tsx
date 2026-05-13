@@ -102,7 +102,7 @@ export default function StartScreen() {
           className="start-hero"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 1.2, delay: 0.3 }}
         >
           <div className="start-logo">
             <Skull size={48} className="logo-icon" />
