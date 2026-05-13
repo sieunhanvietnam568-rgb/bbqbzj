@@ -21,7 +21,7 @@ export default function SettingsScreen() {
         className="settings-grid"
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.3 }}
+        transition={{ duration: 0.5 }}
       >
         {/* API 设置 */}
         <GlassPanel id="settings-api" className="settings-card" variant="strong">
