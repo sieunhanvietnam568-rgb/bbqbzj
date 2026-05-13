@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageSquare, Users, Map, Settings, ChevronDown, Clock } from 'lucide-react';
+import { MessageSquare, Users, Map, Settings, ChevronDown, Clock, LogOut } from 'lucide-react';
 import { useGame } from '../../context/GameContext';
 import type { GameView } from '../../types';
 import './DynamicIsland.css';
