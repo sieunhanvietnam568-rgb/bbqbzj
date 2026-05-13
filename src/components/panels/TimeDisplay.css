@@ -1,0 +1,38 @@
+.time-display {
+  display: flex; align-items: center; gap: var(--space-lg);
+  padding: var(--space-lg);
+  background: var(--bg-glass-strong);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
+  border-radius: var(--radius-xl);
+}
+.time-icon-ring {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  border: 2px solid;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: var(--shadow-glass);
+  flex-shrink: 0;
+}
+.time-info {
+  display: flex; flex-direction: column; gap: 2px;
+}
+.time-main {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+.time-day {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.time-clock {
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.time-period {
+  font-size: var(--text-sm);
+  font-weight: 500;
+}

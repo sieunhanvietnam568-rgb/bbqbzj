@@ -1,0 +1,21 @@
+.character-screen {
+  display: flex;
+  height: 100%;
+  gap: var(--space-lg);
+  padding: 0 var(--space-lg) var(--space-lg);
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+.char-left {
+  width: 320px;
+  flex-shrink: 0;
+}
+.char-right {
+  flex: 1;
+  min-width: 0;
+}
+@media (max-width: 880px) {
+  .character-screen { flex-direction: column; padding: 0 var(--space-md) var(--space-md); }
+  .char-left { width: 100%; }
+}
