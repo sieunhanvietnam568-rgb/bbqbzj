@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Play, Archive, Settings, Skull, Droplets } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Play, Settings, Skull, Droplets } from 'lucide-react';
 import { useGame } from '../../context/GameContext';
 import Modal from '../ui/Modal';
 import './StartScreen.css';
@@ -13,9 +13,9 @@ interface Particle {
 export default function StartScreen() {
   const { state, dispatch } = useGame();
   const [showSettings, setShowSettings] = useState(false);
-  const [particles, setParticles] = useState<Particle[]>([]);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animRef = useRef<number>(0);
+  const partsRef = useRef<Particle[]>([]);
 
   const spawnParticle = useCallback((): Particle => ({
     x: Math.random() * window.innerWidth,
@@ -37,30 +37,28 @@ export default function StartScreen() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    const initial: Particle[] = Array.from({ length: 60 }, () => {
+    partsRef.current = Array.from({ length: 60 }, () => {
       const p = spawnParticle();
       p.y = Math.random() * window.innerHeight;
       p.life = Math.random() * p.maxLife;
       return p;
     });
-    setParticles(initial);
 
     const resize = () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; };
     window.addEventListener('resize', resize);
 
-    let parts = [...initial];
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      parts = parts.map((p) => {
+      partsRef.current = partsRef.current.map((p) => {
         p.x += p.speedX;
         p.y += p.speedY;
         p.life++;
         return p;
       }).filter((p) => p.life < p.maxLife);
 
-      if (parts.length < 60) parts.push(spawnParticle());
+      while (partsRef.current.length < 60) partsRef.current.push(spawnParticle());
 
-      for (const p of parts) {
+      for (const p of partsRef.current) {
         const alpha = p.opacity * (1 - p.life / p.maxLife);
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
@@ -68,7 +66,6 @@ export default function StartScreen() {
         ctx.fill();
       }
 
-      setParticles(parts);
       animRef.current = requestAnimationFrame(animate);
     };
     animRef.current = requestAnimationFrame(animate);
