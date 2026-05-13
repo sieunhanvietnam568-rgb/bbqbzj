@@ -24,7 +24,7 @@ export default function CharacterScreen() {
         className="char-right"
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
+        transition={{ duration: 0.8, delay: 0.3 }}
       >
         <AnimatePresence mode="wait">
           {activeChar && (
