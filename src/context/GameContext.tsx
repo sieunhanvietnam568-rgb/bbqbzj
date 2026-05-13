@@ -123,7 +123,7 @@ function gameReducer(state: GameState, action: GameAction): GameState {
       return { ...state, isGameStarted: true, view: 'main' };
 
     case 'RETURN_TO_START':
-      return { ...state, isGameStarted: false, view: 'start' };
+      return { ...state, isGameStarted: false, view: 'start', isDynamicIslandExpanded: false };
 
     default:
       return state;
