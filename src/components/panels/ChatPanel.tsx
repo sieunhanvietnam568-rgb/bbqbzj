@@ -81,7 +81,7 @@ export default function ChatPanel() {
               className={`chat-msg chat-msg-${msg.role}`}
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.8 }}
             >
               <div className={`msg-avatar msg-avatar-${msg.role}`}>
                 {msg.role === 'user' ? <User size={14} /> : msg.role === 'assistant' ? <Bot size={14} /> : null}
